@@ -1,0 +1,16 @@
+<header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal" routerLink="" style="cursor: pointer;">Ecomm</h5>
+        <nav class="my-2 my-md-0 mr-md-3" *ngIf="!loggedIn">
+            <a class="btn btn-outline-primary mr-2" routerLink="login">Log In</a>
+            <a class="btn btn-outline-primary ml-2" routerLink="signup">Sign up</a>
+        </nav>
+        <nav class="my-2 my-md-0 mr-md-3" *ngIf="loggedIn">
+            <a class="btn btn-outline-primary ml-2" (click)="gotoCart()">Cart</a>
+
+            <a class="btn btn-outline-primary ml-2" (click)="onLogout()" routerLink="">Logout</a>
+        </nav>
+
+      </div>
+      
+  </header>
